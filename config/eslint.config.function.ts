@@ -7,9 +7,9 @@ export default tseslint.config({
   extends: [
     eslint.configs.recommended,
     tseslint.configs.recommended,
-    // functional.configs.externalTypeScriptRecommended,
-    // functional.configs.recommended,
-    // functional.configs.stylistic,
+    functional.configs.externalTypeScriptRecommended,
+    functional.configs.recommended,
+    functional.configs.stylistic,
     // your other plugin configs here
   ],
   languageOptions: {
