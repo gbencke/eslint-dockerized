@@ -1,0 +1,9 @@
+{
+  "root": true,
+
+  "extends": ["hardcore", "hardcore/ts", "hardcore/vue"],
+
+  "parserOptions": {
+    "project": true
+  }
+}
