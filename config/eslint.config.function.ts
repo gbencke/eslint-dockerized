@@ -5,12 +5,10 @@ import tseslint from "typescript-eslint";
 export default tseslint.config({
   files: ["**/*.ts"],
   extends: [
-    eslint.configs.recommended,
-    tseslint.configs.recommended,
-    functional.configs.externalTypeScriptRecommended,
+    eslint.configs.all,
+    tseslint.configs.strictTypeChecked,
     functional.configs.recommended,
     functional.configs.stylistic,
-    // your other plugin configs here
   ],
   languageOptions: {
     parser: tseslint.parser,
