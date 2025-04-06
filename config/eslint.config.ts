@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import functional from "eslint-plugin-functional";
 import tseslint from "typescript-eslint";
+import pluginPromise from "eslint-plugin-promise";
 
 export default tseslint.config({
   files: ["**/*.ts"],
@@ -9,6 +10,7 @@ export default tseslint.config({
     tseslint.configs.strictTypeChecked,
     functional.configs.recommended,
     functional.configs.stylistic,
+    pluginPromise.configs['flat/recommended'],
   ],
   languageOptions: {
     parser: tseslint.parser,
