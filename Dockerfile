@@ -16,6 +16,7 @@ RUN set -eux && npm install -g \
          eslint@9.24.0 \
          eslint-config-hardcore@47.0.1\
          eslint-plugin-promise@7.2.1 \
+         @eslint-react/eslint-plugin \
          eslint-plugin-functional@9.0.1 && /usr/local/lib/node_modules/eslint/bin/eslint.js --version | grep -E '^v?[0-9]+'
 
 ENV NODE_PATH=/usr/local/lib/node_modules
