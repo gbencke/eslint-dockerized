@@ -11,6 +11,8 @@ RUN set -eux \
 RUN set -eux && npm install -g \
          @eslint/js@9.24.0 \
          typescript@5.8.3 \
+         eslint-formatter-compact \
+         eslint-formatter-unix \
          typescript-eslint@8.29.0 \
          jiti@2.4.2 \
          eslint@9.24.0 \
