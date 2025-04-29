@@ -1,16 +1,18 @@
 import eslint from '@eslint/js';
 import functional from "eslint-plugin-functional";
 import tseslint from "typescript-eslint";
+import eslintReact from "@eslint-react/eslint-plugin";
 import pluginPromise from "eslint-plugin-promise";
 
 export default tseslint.config({
-  files: ["**/*.ts"],
+  files: ["**/*.ts", "**/*.tsx"],
   extends: [
     eslint.configs.all,
     tseslint.configs.strictTypeChecked,
     functional.configs.recommended,
     functional.configs.stylistic,
     pluginPromise.configs['flat/recommended'],
+    eslintReact.configs["recommended-type-checked"],
   ],
   languageOptions: {
     parser: tseslint.parser,
