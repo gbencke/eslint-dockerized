@@ -21,6 +21,8 @@ export default tseslint.config({
     },
   },
   rules: {
-    // any rule configs here
+    "functional/no-classes": "off",
+    "functional/no-expression-statements": "off",
+    "functional/functional-parameters": "off",
   },
 });
