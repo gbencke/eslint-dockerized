@@ -5,7 +5,7 @@ LABEL \
 
 RUN set -eux \
 	&& apk add --no-cache \
-		nodejs-current \
+		nodejs \
 		npm
 
 RUN set -eux && npm install -g \
@@ -16,12 +16,17 @@ RUN set -eux && npm install -g \
          typescript-eslint@8.29.0 \
          jiti@2.4.2 \
          eslint@9.24.0 \
-         eslint-config-hardcore@47.0.1\
+         eslint-config-hardcore@47.0.1 \
          eslint-plugin-promise@7.2.1 \
          eslint-plugin-react@7.37.2 \
          eslint-plugin-react-hooks@5.1.0 \
          eslint-plugin-jsx-a11y@6.10.2 \
-         eslint-plugin-functional@9.0.1 && /usr/local/lib/node_modules/eslint/bin/eslint.js --version | grep -E '^v?[0-9]+'
+         eslint-plugin-functional@9.0.1 \
+         eslint-plugin-unicorn@57.0.0 \
+         eslint-plugin-sonarjs@3.0.2 \
+         eslint-plugin-import-x@4.16.1 \
+         eslint-import-resolver-typescript@3.10.1 \
+         && /usr/local/lib/node_modules/eslint/bin/eslint.js --version | grep -E '^v?[0-9]+'
 
 ENV NODE_PATH=/usr/local/lib/node_modules
 RUN set -eux && cp /usr/local/lib/node_modules/eslint/bin/eslint.js /usr/bin/eslint
